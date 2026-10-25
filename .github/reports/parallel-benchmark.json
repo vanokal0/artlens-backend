@@ -1,0 +1,955 @@
+{
+  "images": 100,
+  "seed": 42,
+  "split": "train",
+  "split_sha256": "80556bc7841f318918b87e9105904031e822fd56d791fb11e5777cb671f01fce",
+  "preprocessing_hash": "e32d0ba0232650487469563e78ca7ad23019faf2aa46828d6ab39e937ca0fe6d",
+  "samples": [
+    {
+      "filename": "data/selected/Baroque/0039.jpg",
+      "label": 0,
+      "identity": "43e2a58907b96b1bea5ef65a5dcc4e839578124ef2b8c839eda54bc75c3c6434",
+      "sha256": "3ce67df9a4e374e9f169a328e04da3472638021fcbd96e9b14327ef96e27cbac",
+      "split": "train",
+      "width": 940,
+      "height": 1678
+    },
+    {
+      "filename": "data/selected/Baroque/0156.jpg",
+      "label": 0,
+      "identity": "39c58b2a86088c7ca42b560c1549e0aab27ae20605bbe0fd9369b2b50596f6db",
+      "sha256": "1c59b4077f25e9c7bcea0106e7416c494124be715d150ffd910a5977b12e18ec",
+      "split": "train",
+      "width": 3084,
+      "height": 3736
+    },
+    {
+      "filename": "data/selected/Baroque/0158.jpg",
+      "label": 0,
+      "identity": "92132d409eb419f961cb63310cb088ce5ac7c023a6ab10301838b3d5e8beec0b",
+      "sha256": "5cc6cc1e09b55534097e8d22753de116a34771c5817db3e6e2af31c215f270bd",
+      "split": "train",
+      "width": 588,
+      "height": 678
+    },
+    {
+      "filename": "data/selected/Baroque/0342.jpg",
+      "label": 0,
+      "identity": "d1df3302f871ae0c120291d86ca31c9790ebea1eae0de28412b7f0b9ea1f2916",
+      "sha256": "3d4ca21256dff6810b5e6bd9cc92e9158b3107b98836c845439cf9dc35e0ad0b",
+      "split": "train",
+      "width": 1099,
+      "height": 808
+    },
+    {
+      "filename": "data/selected/Baroque/0443.jpg",
+      "label": 0,
+      "identity": "1235677ebc8c0d7f5164945f8757840b61738039633b664205250b9329bcfbaa",
+      "sha256": "1d49a18e62115959783947eae5e9a7d2c737eef91bcd69a72d0d12b81f3cb6ac",
+      "split": "train",
+      "width": 1200,
+      "height": 1045
+    },
+    {
+      "filename": "data/selected/Baroque/0448.jpg",
+      "label": 0,
+      "identity": "06fe50f0518e2e51a055837751f52e33e34b6f6a6f7162ac1331d50416f2eb75",
+      "sha256": "69c72ab51add7c3da97f05a2a1d2b61d387301c5f41232ef553ed72ee39e4876",
+      "split": "train",
+      "width": 650,
+      "height": 867
+    },
+    {
+      "filename": "data/selected/Baroque/0498.jpg",
+      "label": 0,
+      "identity": "f9ea0ce70f1bd851c2d95db224df1c70b7f8d1a893258616d80f3d437049f1ca",
+      "sha256": "649990db5e667726470b0e5914214442579f76688f9296727468ea42b5412844",
+      "split": "train",
+      "width": 1143,
+      "height": 1920
+    },
+    {
+      "filename": "data/selected/Baroque/0535.jpg",
+      "label": 0,
+      "identity": "a6efb2338f1dda461956b378d80891984c296bc3583d8da9e228c9f3821846b7",
+      "sha256": "c139a69f001d186d7689ae72405b67df8d32bf3d1d8afec5b8cff0640df1769d",
+      "split": "train",
+      "width": 434,
+      "height": 600
+    },
+    {
+      "filename": "data/selected/Baroque/0571.jpg",
+      "label": 0,
+      "identity": "384f324dc3c7ec3e303153050c5a24c110c46aa9c93d048cba247cb87287ae6a",
+      "sha256": "257ba1ec0afec9deefb604d0c9cb89809ffca892f24abee41ab0963808df3a46",
+      "split": "train",
+      "width": 633,
+      "height": 800
+    },
+    {
+      "filename": "data/selected/Baroque/0572.jpg",
+      "label": 0,
+      "identity": "6145e4a784531019ae207c88f1c4ce8db61763a47adf16dfb224fbac4dff0911",
+      "sha256": "157c5d36dba67fd28ca2e3ae49d18b19e6971eec271d8b2d3644c0043b05896b",
+      "split": "train",
+      "width": 680,
+      "height": 816
+    },
+    {
+      "filename": "data/selected/Baroque/0583.jpg",
+      "label": 0,
+      "identity": "2fd64edd2dcffbcab3ee431aeda3d4a5acd86cd5af2d940cd5f1bb500976e466",
+      "sha256": "d0725793cdf73cfcb98720f1f59713537c650df4a163f6f371835310cf65a2c5",
+      "split": "train",
+      "width": 398,
+      "height": 480
+    },
+    {
+      "filename": "data/selected/Baroque/0586.jpg",
+      "label": 0,
+      "identity": "312bbfca975055978be0604845caaf19f7f78823af4d0400cf919cc2c1ba9ad8",
+      "sha256": "4818fa39aa9a064a7e49191859b52718b748d31dfd1a57c096122f06602cbff8",
+      "split": "train",
+      "width": 2352,
+      "height": 2952
+    },
+    {
+      "filename": "data/selected/Baroque/0660.jpg",
+      "label": 0,
+      "identity": "6eb1134180cdc10e8f00bd35744f100cc156b3ef3628ea4c3a8d55c629ce5b6b",
+      "sha256": "1e755cd2dded1acaede176cc701e76d0cb3540c465f47472849e2fb63e474e51",
+      "split": "train",
+      "width": 5109,
+      "height": 3803
+    },
+    {
+      "filename": "data/selected/Baroque/0708.jpg",
+      "label": 0,
+      "identity": "cb8f47a208ce71818cd335aececd870e6b7e84dccef7db86022053c37ed2cdf7",
+      "sha256": "120450e52babcb8f48558d8fc583421edea887526bf2c33d8166d2d4d0661f8a",
+      "split": "train",
+      "width": 650,
+      "height": 867
+    },
+    {
+      "filename": "data/selected/Baroque/0747.jpg",
+      "label": 0,
+      "identity": "99007f7a48d423e1dc2f5e454532eb23a5906c086d133001ed536f5040989d84",
+      "sha256": "74a24ce3337668ec7ac5d755aafe2fdef759c461c710cff22745309364896123",
+      "split": "train",
+      "width": 3202,
+      "height": 4122
+    },
+    {
+      "filename": "data/selected/Baroque/0752.jpg",
+      "label": 0,
+      "identity": "3752cb4ed706224c5d925b4ffc9ba8cf82bae02bcd264bc4f6feabc93d5b7acf",
+      "sha256": "91fabe2b1b0c7e39590eed662db1025ae4e606a4927dceee6fc434dcc5c10c9c",
+      "split": "train",
+      "width": 768,
+      "height": 988
+    },
+    {
+      "filename": "data/selected/Baroque/0763.jpg",
+      "label": 0,
+      "identity": "2c559077903e6e48b85c532b0248ef72b26e8ccba92c739b074ba471a6b33f58",
+      "sha256": "ccd4eb4b222bb98cf7d4cb203603ebea8f8a7872af3474190dbc9c729500ad1d",
+      "split": "train",
+      "width": 2972,
+      "height": 4740
+    },
+    {
+      "filename": "data/selected/Baroque/0793.jpg",
+      "label": 0,
+      "identity": "4d1815a7177741c9e1718d81e15d6e717c8549727864fdf4ea0f1c6a0276fab4",
+      "sha256": "2d3c12bf801ca71bd1758e8e7bbe2943a5c5131da876e085364d4100a9919665",
+      "split": "train",
+      "width": 1326,
+      "height": 1561
+    },
+    {
+      "filename": "data/selected/Baroque/0803.jpg",
+      "label": 0,
+      "identity": "123f12c2efb7e9bb5bab42faa441fcdf8074cdd7d6f3c452d80211315f583083",
+      "sha256": "0e573cb0c2469c8460075125219dfe2a18a3e9bade197b05341babebab188b9f",
+      "split": "train",
+      "width": 645,
+      "height": 900
+    },
+    {
+      "filename": "data/selected/Baroque/0913.jpg",
+      "label": 0,
+      "identity": "9adf1d174a4a3d794aeaffec29280260a8f929ce0d8687788b841b2c2204b7c2",
+      "sha256": "2fec201e26903b51ec8434fb165dea78a1751aba5ae8b8100d902a1c9b2f3846",
+      "split": "train",
+      "width": 2068,
+      "height": 2874
+    },
+    {
+      "filename": "data/selected/Cubism/0192.jpg",
+      "label": 2,
+      "identity": "ab339e98b972ff4166af13d104d460b4b66172ff14e72e20a38caebe272a0c15",
+      "sha256": "2f7af288b90677afd4e4ed4ece24733360892eb2fd61262dbaa339ed463dd3b9",
+      "split": "train",
+      "width": 768,
+      "height": 600
+    },
+    {
+      "filename": "data/selected/Cubism/0243.jpg",
+      "label": 2,
+      "identity": "e479a51476f4a1818bf19cd58b55af45fa04d823d16634c9030c336c654efa11",
+      "sha256": "086d6a8f94d0b47608905431af15c7645494f5ac3355d3817e63f85fe00f8f2d",
+      "split": "train",
+      "width": 806,
+      "height": 1032
+    },
+    {
+      "filename": "data/selected/Cubism/0258.jpg",
+      "label": 2,
+      "identity": "a74fbfe29d9662707c2752670c15fea3c6c810da8ab44fb76a9f1aadde0c163b",
+      "sha256": "a1925fc5b064b6fca704eadac207224d6300bffebd62704b4bae2600a75e8cfd",
+      "split": "train",
+      "width": 1031,
+      "height": 1300
+    },
+    {
+      "filename": "data/selected/Cubism/0287.jpg",
+      "label": 2,
+      "identity": "3dd884a94341ac0e13daa7a5173824340ce040dd438793a9dc623c12e38aab49",
+      "sha256": "a16cf566eb604b5f7583a8474d2d0c5398d8866bb86a2546531ef1a8b77ee854",
+      "split": "train",
+      "width": 768,
+      "height": 655
+    },
+    {
+      "filename": "data/selected/Cubism/0293.jpg",
+      "label": 2,
+      "identity": "349acb11b732126467c7ef65cb22e2df87eb41ed41c2ea06d44f515ec8cd4847",
+      "sha256": "a86d6f2e073f57b432af206a97f22d18d62c06b01aee3d79cb568d39b0dd26df",
+      "split": "train",
+      "width": 306,
+      "height": 496
+    },
+    {
+      "filename": "data/selected/Cubism/0327.jpg",
+      "label": 2,
+      "identity": "e5c0d2745c8f799d1493afecb1c3f30cdddc626a30905a1a126b3e96dc9557e1",
+      "sha256": "24ba8442e29c2d5900f223bd1b2e66ae690e9fdb1f62ad504dd247096fdcafcd",
+      "split": "train",
+      "width": 650,
+      "height": 908
+    },
+    {
+      "filename": "data/selected/Cubism/0351.jpg",
+      "label": 2,
+      "identity": "a8391c02d4570cc93735776f2b94ba01fa2bc49873b39752f703c710111a9d9e",
+      "sha256": "9d66576cc7778bf6b72c8bb1e0870ea44425c6ebb354e4dfd22d575b0cc754de",
+      "split": "train",
+      "width": 800,
+      "height": 617
+    },
+    {
+      "filename": "data/selected/Cubism/0361.jpg",
+      "label": 2,
+      "identity": "922208c5c7ebd9bb9393c26a66545bc94503a768f053411864b2ecfdeb6f7573",
+      "sha256": "152ff45d50b1aed7e90f0935689a4715c4061a9c07de7d19479dd50dee266919",
+      "split": "train",
+      "width": 570,
+      "height": 435
+    },
+    {
+      "filename": "data/selected/Cubism/0442.jpg",
+      "label": 2,
+      "identity": "c159f788d624a09c1440c38e2e24cd1eeda85ff3ea6ebe08646f376d823c4b33",
+      "sha256": "4fe7d89e61644e27a6061cf009738f488cb8e3e1cd9ba921490a3530151fe2f8",
+      "split": "train",
+      "width": 601,
+      "height": 495
+    },
+    {
+      "filename": "data/selected/Cubism/0447.jpg",
+      "label": 2,
+      "identity": "5979aa8452eb49ba23cb3b5335ab8dc56cd3796d91369738750ea00948336f27",
+      "sha256": "c0b26d3609331bb065caa446d0ea9dd70fe5ab73916cd848f8a1fcd9fac55f10",
+      "split": "train",
+      "width": 439,
+      "height": 600
+    },
+    {
+      "filename": "data/selected/Cubism/0514.jpg",
+      "label": 2,
+      "identity": "525d8b8e651f0b53681220b529e17f452cc0f4369be2570bf3d5b9081a32e0f6",
+      "sha256": "6e77c552b104770e0d67a3c4d6ea94b94dab6f036b2ae5d8c32c2e445fd26051",
+      "split": "train",
+      "width": 432,
+      "height": 570
+    },
+    {
+      "filename": "data/selected/Cubism/0531.jpg",
+      "label": 2,
+      "identity": "23ff88b3a47ae0db377a9d2fc1477a285df6c2f136b3a5632d30e7c503f09771",
+      "sha256": "bb352000a2fa2e4022de8f66f435df0fbfdf6919170e603348c7d0ea06473050",
+      "split": "train",
+      "width": 800,
+      "height": 1011
+    },
+    {
+      "filename": "data/selected/Cubism/0602.jpg",
+      "label": 2,
+      "identity": "2081405e2aef15d8ba425f8e7f9e46faa3d789467770a97ecf44a09105313253",
+      "sha256": "fc7e7780c2eb52bbee10bbb5bcb7320efd037c7d5b7d12695bcd16b80316c3fa",
+      "split": "train",
+      "width": 355,
+      "height": 439
+    },
+    {
+      "filename": "data/selected/Cubism/0652.jpg",
+      "label": 2,
+      "identity": "a3012afc2b9ea119bea8c8450d302a41e304dcc6cc77bc0b44d9aba34df28d3e",
+      "sha256": "9522dc99b78bc6c6fc386b1f6bf7b9ab83df3e54009f69528eae844c12bfc7d9",
+      "split": "train",
+      "width": 500,
+      "height": 417
+    },
+    {
+      "filename": "data/selected/Cubism/0771.jpg",
+      "label": 2,
+      "identity": "5daea7f949c22332812f2f9a00e65d13146865d998d8457d9ecfe69536e3acb1",
+      "sha256": "a2f527fbe8b0332ef8769edd6df873afac651d8f0c63a122dd2d2528f5a272f0",
+      "split": "train",
+      "width": 250,
+      "height": 320
+    },
+    {
+      "filename": "data/selected/Cubism/0772.jpg",
+      "label": 2,
+      "identity": "3d77781a21f483864c17a5ab7f48f27384de93dfd50064baed34522c43895cd4",
+      "sha256": "49a6520d85495d25600c665067d3a90bf4c496f7185c49406ee648699139abb0",
+      "split": "train",
+      "width": 1764,
+      "height": 2513
+    },
+    {
+      "filename": "data/selected/Cubism/0833.jpg",
+      "label": 2,
+      "identity": "7e4fbcab653ca7696a58a4a85e5b1b49c388fc5872bd76011e34b0cc0698388d",
+      "sha256": "c5ef8111f387436c11876a0efa4028a383401e6fb33075248426939f86087afd",
+      "split": "train",
+      "width": 527,
+      "height": 410
+    },
+    {
+      "filename": "data/selected/Cubism/0865.jpg",
+      "label": 2,
+      "identity": "bdcfcb11e3574a0d35157fea1ba8990f6f4db82e5dc5b6f8610c0cdbe9c1a547",
+      "sha256": "bbd7b4b05e56eab04df20209dc9a603e2fd487b261c0b09603d0ce1fade31a06",
+      "split": "train",
+      "width": 398,
+      "height": 480
+    },
+    {
+      "filename": "data/selected/Cubism/0939.jpg",
+      "label": 2,
+      "identity": "e5eb6fd697dde14bb2a9e4c6a54c9a95ccf94d47dcbe9801ae34c04d771c0e67",
+      "sha256": "de6b9f9b083fc1e760b4b44972878c1d632f6ee4c25dd4d9d13f473c43ef7b98",
+      "split": "train",
+      "width": 423,
+      "height": 570
+    },
+    {
+      "filename": "data/selected/Cubism/0993.jpg",
+      "label": 2,
+      "identity": "c656f819eeee8e743f35c7fa274534ad369c2bfd2c167ec674ee75a50669e2e1",
+      "sha256": "47aa2c72a9770c65fa8e354a3947a0b1019faf5bdd427e5972b20b3b3c44dcf7",
+      "split": "train",
+      "width": 540,
+      "height": 498
+    },
+    {
+      "filename": "data/selected/Impressionism/0075.jpg",
+      "label": 1,
+      "identity": "f7b2c13fe4968e8f3c8f4d7bd9f8d4f85b168353fb6fbc02be6b12444f6ea929",
+      "sha256": "cb6f0e0b62c1bb583ca1af5ea7429ac4d831ef3c89f7280a2a4bc237b2f6f90a",
+      "split": "train",
+      "width": 1104,
+      "height": 741
+    },
+    {
+      "filename": "data/selected/Impressionism/0176.jpg",
+      "label": 1,
+      "identity": "ede7d36cf0b58744bd4e818d613ad6e9c4e88147bb4d82e9cf0eb91bb4f9d304",
+      "sha256": "a7ee80d9f2f2d954e67429a73def205fb735e794579fd0c1c771391f4b5f7964",
+      "split": "train",
+      "width": 1247,
+      "height": 1024
+    },
+    {
+      "filename": "data/selected/Impressionism/0187.jpg",
+      "label": 1,
+      "identity": "d742be0d52160546ba8984cf0cf3a5ecb710fdc47f1621c3c60fca07421446d2",
+      "sha256": "9a03827668187e5b03b148c78fad182e3321a36aa20b2ce73e807f027e03d12f",
+      "split": "train",
+      "width": 395,
+      "height": 547
+    },
+    {
+      "filename": "data/selected/Impressionism/0201.jpg",
+      "label": 1,
+      "identity": "badbcf1a723eb993409e18212f9ca8e98ca25b33ce41587256760e0884ece1c0",
+      "sha256": "1995771a7380c5e4eb2c950321671b31cda6ca3fcd16b0a31424f43be77edcb0",
+      "split": "train",
+      "width": 744,
+      "height": 901
+    },
+    {
+      "filename": "data/selected/Impressionism/0224.jpg",
+      "label": 1,
+      "identity": "ead9a9291cafe4b4f5ec498deebef65819972e35e67f755fd1931db5c1148d8c",
+      "sha256": "047c0c7543af072a3d5c7d436b5a8ea75f85e397365a65637646e1c6c96f44fd",
+      "split": "train",
+      "width": 850,
+      "height": 1133
+    },
+    {
+      "filename": "data/selected/Impressionism/0274.jpg",
+      "label": 1,
+      "identity": "b0ffdb9b8c84331393ea3b9d26394d4b12b13b3660b209cc040d03b5637ef274",
+      "sha256": "acefaafbec740b9e2dcc9faa47daa022a48a5fc1785527f8ba91d1a72ae42f4f",
+      "split": "train",
+      "width": 1257,
+      "height": 1024
+    },
+    {
+      "filename": "data/selected/Impressionism/0402.jpg",
+      "label": 1,
+      "identity": "b375e0661d7076088a541cc7405993fc51f8325034e384886e6cb0d2aebb7f26",
+      "sha256": "ca2778bf58541180d5f083893c9ba9482a7e3c75a983ef40463e959a0d6b1ada",
+      "split": "train",
+      "width": 1004,
+      "height": 1280
+    },
+    {
+      "filename": "data/selected/Impressionism/0420.jpg",
+      "label": 1,
+      "identity": "5f6cdbda44641160a118137382de3ed71562af1ee1f124f622b18ead65b33b4c",
+      "sha256": "bd85d37385bda6ca9f0268c4ae0b980d0c2c5065e5712e45dbe8fcaea04ec936",
+      "split": "train",
+      "width": 976,
+      "height": 1054
+    },
+    {
+      "filename": "data/selected/Impressionism/0445.jpg",
+      "label": 1,
+      "identity": "7564a1c7510caaf836b7ad07c5d918ed99ea5d1c8647182ea96bc6ebb2a46994",
+      "sha256": "387898e318bdc5fcd5ad324dce6b4c83c9b73ce9b5c59b5d33e5dd42c5189b17",
+      "split": "train",
+      "width": 2229,
+      "height": 1459
+    },
+    {
+      "filename": "data/selected/Impressionism/0479.jpg",
+      "label": 1,
+      "identity": "d3e03ac779980832cb7fa8b8a2ad7e5515a660c5edc7e23da9fc370934e2bf6e",
+      "sha256": "4f55dca7f6212bd4b65fc8fb40b1b41295125a3dc3e522e360b983ae2ba0d09d",
+      "split": "train",
+      "width": 893,
+      "height": 1188
+    },
+    {
+      "filename": "data/selected/Impressionism/0553.jpg",
+      "label": 1,
+      "identity": "5b3f60061028b13ed05e82e1eeb5de3fad30bd06ad9ebed59c5fb5b560934d71",
+      "sha256": "0da50093c41a0f217406a3a0fd8589e55b85e6312a8b663c78a39b0381e67c56",
+      "split": "train",
+      "width": 700,
+      "height": 580
+    },
+    {
+      "filename": "data/selected/Impressionism/0580.jpg",
+      "label": 1,
+      "identity": "a32e3d7b5aeda725bb013c38c55c011667465814c46b8bb569314ff95afa425b",
+      "sha256": "09a8110f033b27aa25f33e90636f73d0b62bb8dcaefbd984ac3b1a71fefddbc8",
+      "split": "train",
+      "width": 1429,
+      "height": 1911
+    },
+    {
+      "filename": "data/selected/Impressionism/0595.jpg",
+      "label": 1,
+      "identity": "e504313731020783c82caae709a8559e747f639ae68b896aed53a7860c9d007a",
+      "sha256": "a50adb5d54619f0651b7dadda41d0a3d02de7afcb7b461bb02513cd80c317ab9",
+      "split": "train",
+      "width": 1009,
+      "height": 805
+    },
+    {
+      "filename": "data/selected/Impressionism/0658.jpg",
+      "label": 1,
+      "identity": "4ecc945e00e04df30ffd98d7f02068a042e9a756c5dfbd2e9093d77119a10c36",
+      "sha256": "0d34d9a45e1b1e1b2cb09bf5f9e7f9e0b808e690fc0e69066d11419f6110c3ed",
+      "split": "train",
+      "width": 650,
+      "height": 800
+    },
+    {
+      "filename": "data/selected/Impressionism/0736.jpg",
+      "label": 1,
+      "identity": "b9bb377c5a1e83c3877a8248ed3e79e82ab11d510e007f361841fcb413a2466e",
+      "sha256": "d5af85178f8b9bdceded4946369d6e60fb7e288695a59459a01ada018f3971e1",
+      "split": "train",
+      "width": 1130,
+      "height": 773
+    },
+    {
+      "filename": "data/selected/Impressionism/0884.jpg",
+      "label": 1,
+      "identity": "82d1278b9808b4182c121d18ec486a8602108e0b0eb8cc6c0d96ba98e4489f23",
+      "sha256": "fe093e44aab6d76614e1c908294bfc3323da646e1f7d76ea30a144d0dde698a1",
+      "split": "train",
+      "width": 2332,
+      "height": 3176
+    },
+    {
+      "filename": "data/selected/Impressionism/0891.jpg",
+      "label": 1,
+      "identity": "6ae243768b1901764c9deac90a0995a4d7aa8ac80a010be30b6988e7ebf47c29",
+      "sha256": "1207744b39abfe5f109b031a275fe55a6a106a475882c6fb9dfea94115cbeb73",
+      "split": "train",
+      "width": 1006,
+      "height": 764
+    },
+    {
+      "filename": "data/selected/Impressionism/0907.jpg",
+      "label": 1,
+      "identity": "25f3ffb1bf93f0a11416f21e4661ef4fd20273a101d639f8d280fd53ce520200",
+      "sha256": "468e8c2968b2dc23a440dee7be6a875dc065ea51e8d44ce0b9826b6813fd170b",
+      "split": "train",
+      "width": 616,
+      "height": 1187
+    },
+    {
+      "filename": "data/selected/Impressionism/0939.jpg",
+      "label": 1,
+      "identity": "1ccfc34805aede4ade1427ef0e989e7431c218fc5a50a682ccd0951b88b62e20",
+      "sha256": "1a2dd04bed4acc09fb50c43bf400bf86972e2b9527688ab6a39f8802517d3310",
+      "split": "train",
+      "width": 2054,
+      "height": 2882
+    },
+    {
+      "filename": "data/selected/Impressionism/0997.jpg",
+      "label": 1,
+      "identity": "20008d95f1c09a6b59d73ce35ddcd45f07f2e61d8b5959ca2e09171e15739bd0",
+      "sha256": "fc871e93b53d696f27c3583c9477ec78f2c1a9927acd3abc6dd5939c5a9d6449",
+      "split": "train",
+      "width": 943,
+      "height": 758
+    },
+    {
+      "filename": "data/selected/Pop-Art/0029.jpg",
+      "label": 3,
+      "identity": "2ecf56cf2333627cf58c467dd273cfeae7f06e2f971af916a797c2bc91ab31aa",
+      "sha256": "3c8c1e06b939d99a4d9e09089bca6ddb260698be99298c38fde177fd600e4b53",
+      "split": "train",
+      "width": 378,
+      "height": 500
+    },
+    {
+      "filename": "data/selected/Pop-Art/0058.jpg",
+      "label": 3,
+      "identity": "ffa60782c29ad1665264d3b3a15d60a68b893ceec246be97ed373e0aa2e39e14",
+      "sha256": "78e95c88ef20e743684689fe38b68acf3c365e7f40d2ffbd6921d54052364c4a",
+      "split": "train",
+      "width": 576,
+      "height": 721
+    },
+    {
+      "filename": "data/selected/Pop-Art/0089.jpg",
+      "label": 3,
+      "identity": "04719a8ee8fd0cd1b8050a36eaa763697b3419eceb5cb99db8808addc610c9bb",
+      "sha256": "17c55149573d0755d316054b30cf72146c4ac4c03e4d4af58b9a8704e9cc10b4",
+      "split": "train",
+      "width": 371,
+      "height": 432
+    },
+    {
+      "filename": "data/selected/Pop-Art/0127.jpg",
+      "label": 3,
+      "identity": "79366d1d7354a7581fe7a475ae71d371d5630293045664602bb0759a8d6261de",
+      "sha256": "462abd12e9ad02a02f28b5f576a9313171333e513ec0b636f74ca458c53c6044",
+      "split": "train",
+      "width": 1164,
+      "height": 900
+    },
+    {
+      "filename": "data/selected/Pop-Art/0284.jpg",
+      "label": 3,
+      "identity": "8e42293b20bafbc9ec7da45a73c35b956fb5466d48cc4b5b7caba3c778cf36b2",
+      "sha256": "f870a0207d5b6f353501b3bbd2ec2abde990d87e620c4d0df7038be03a08098f",
+      "split": "train",
+      "width": 570,
+      "height": 192
+    },
+    {
+      "filename": "data/selected/Pop-Art/0378.jpg",
+      "label": 3,
+      "identity": "036dbe2f761ec31087bac0e26b4afbef60fe13d30c12bbe7e8eb5a1e2986cb8c",
+      "sha256": "e6ec0eb9810fb332910c7ae0574ce69249a5c96807aecaf429b4e53740b1b80b",
+      "split": "train",
+      "width": 210,
+      "height": 290
+    },
+    {
+      "filename": "data/selected/Pop-Art/0396.jpg",
+      "label": 3,
+      "identity": "822304c1593bcdcb2fa3255676a26efb7b66642769bb4846305dbefd4ab0aafa",
+      "sha256": "64ff3aa348bcdef232b1d793f6b75f0e9f24bba22f604b6b979d8b4e7bafc4f0",
+      "split": "train",
+      "width": 828,
+      "height": 1014
+    },
+    {
+      "filename": "data/selected/Pop-Art/0409.jpg",
+      "label": 3,
+      "identity": "60e72799c8151d1e3066373fc3fca037e9eb3b7a6842745b4d0efbc2aac99687",
+      "sha256": "4b6c483046af624567216bc2295cbdfbf6a1a1c6dfc665131cad1247a2fffc9d",
+      "split": "train",
+      "width": 660,
+      "height": 768
+    },
+    {
+      "filename": "data/selected/Pop-Art/0413.jpg",
+      "label": 3,
+      "identity": "5ea80c7ff121459360f036036ee810fbf46dbb22749a52b8fadb468b6a0dbd09",
+      "sha256": "e8dad19fea51ebcf197b56b159178ee5872992921b9f21670ca50b40f2303f8b",
+      "split": "train",
+      "width": 500,
+      "height": 498
+    },
+    {
+      "filename": "data/selected/Pop-Art/0426.jpg",
+      "label": 3,
+      "identity": "24bef5f47c87427332fdfd1c7e6faf86fbb3dff451f0209e38a2956b881769a0",
+      "sha256": "a20bb891c2c2df5a3cc3545c7a624f25508dd51617d9cdf913b9cda8710361c8",
+      "split": "train",
+      "width": 358,
+      "height": 432
+    },
+    {
+      "filename": "data/selected/Pop-Art/0433.jpg",
+      "label": 3,
+      "identity": "9e06601dc6a6fd8cea3e6a7c817c63681c5815d2312476b6d4f19fee5dc173fc",
+      "sha256": "c34522ba3769b2f1a0335e13aaa090d83c22f8833c65d1e46a539827ba3dbfe7",
+      "split": "train",
+      "width": 389,
+      "height": 400
+    },
+    {
+      "filename": "data/selected/Pop-Art/0449.jpg",
+      "label": 3,
+      "identity": "8e57d667a5ad60582b3c0074738ae35c393e8cf79bc33b695a9a5de5150e572a",
+      "sha256": "3a335bc9e8a78fe8f6f4b89a5ee20b808e91d8c32d72a6a8d5ea29bca00bbbd9",
+      "split": "train",
+      "width": 358,
+      "height": 480
+    },
+    {
+      "filename": "data/selected/Pop-Art/0477.jpg",
+      "label": 3,
+      "identity": "47cac6fee06e9da7025ca9728a0dec3947001e955fb99109d89b151181089806",
+      "sha256": "72894faedb1c784a5d04060d1db683a428ad985e725845a6e57c7e2271590153",
+      "split": "train",
+      "width": 320,
+      "height": 650
+    },
+    {
+      "filename": "data/selected/Pop-Art/0500.jpg",
+      "label": 3,
+      "identity": "3dec2ae9791c5e4368e8b92763b0418a707468853e32d0ff74e0b5d1f413345c",
+      "sha256": "f24b709cc6017aa1aa0bd065e5a5fe123f6df7765739ac809a5c285b5197fcf5",
+      "split": "train",
+      "width": 1026,
+      "height": 1280
+    },
+    {
+      "filename": "data/selected/Pop-Art/0681.jpg",
+      "label": 3,
+      "identity": "6d06d5b06993d1d05bb68f0f8ee78d7c18461954c024e14ea46bbf8f356b7f6f",
+      "sha256": "a80980c06a71897668f038e4e5ad564ed2938e1521af38d273f3f3a61326b092",
+      "split": "train",
+      "width": 500,
+      "height": 344
+    },
+    {
+      "filename": "data/selected/Pop-Art/0781.jpg",
+      "label": 3,
+      "identity": "512bac3f2549a5632e4c15ec39de77817ddb37f8f56e092362955939f2e31ff1",
+      "sha256": "b5cdd05b46281681eff09ac24bd354a3d818d66051b15ac3958198c77e928240",
+      "split": "train",
+      "width": 512,
+      "height": 367
+    },
+    {
+      "filename": "data/selected/Pop-Art/0808.jpg",
+      "label": 3,
+      "identity": "099d3ed0d4b2fab64534fa37627fde3f14ae89dc75b41546cafe7d961ff8f183",
+      "sha256": "3d99b552880e345b6329e2aa3e23fef5b6231830f65cccb215a08affc861c8c9",
+      "split": "train",
+      "width": 1024,
+      "height": 745
+    },
+    {
+      "filename": "data/selected/Pop-Art/0835.jpg",
+      "label": 3,
+      "identity": "519fc66ca68a6ff0d5098f9f244a6b3a086c41c9c1bdafdb4fed0599a0190f36",
+      "sha256": "0e2cd51eb1678b759c8955e2ae9c814b1c6c43c50b4e393f0401f59fadbff668",
+      "split": "train",
+      "width": 468,
+      "height": 570
+    },
+    {
+      "filename": "data/selected/Pop-Art/0837.jpg",
+      "label": 3,
+      "identity": "ee96a0046a2c42982eeb25cb8bbfbc4989238e09e927f9e64f9f54075a0e081d",
+      "sha256": "37940655349ad2bd4971b6d1a51bcff93398cd1229df345531b20779e6eee279",
+      "split": "train",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "filename": "data/selected/Pop-Art/0991.jpg",
+      "label": 3,
+      "identity": "8c605a74ed567b2b4e57407c59b5244338dcb167e8855861618b7db11a01415f",
+      "sha256": "e4ac4018418f4a8a4296431c8aa70164a727e36d7743412a4cd01d326bad54df",
+      "split": "train",
+      "width": 640,
+      "height": 475
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0013.jpg",
+      "label": 4,
+      "identity": "739d7a13c3d6ba6088870fc2eada7def36643a9b5ab04a9a31f8dfcb204d8e88",
+      "sha256": "fd027364362414398f960eb0fd647a4e68de99d640ecc5a9166957416988d019",
+      "split": "train",
+      "width": 1203,
+      "height": 3564
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0080.jpg",
+      "label": 4,
+      "identity": "bb1d4acb2d204ea449e0601e9ec555e5abebbf7af248a13fe4a2474388177a20",
+      "sha256": "86ebbe4d4c837288623805e29bb535b1e0870bd4286cc40ff920c26f7efadf74",
+      "split": "train",
+      "width": 1179,
+      "height": 1779
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0086.jpg",
+      "label": 4,
+      "identity": "958b9828e293f372916992ecd0f981d9a12265cf497a1e9854e9a5655aae0982",
+      "sha256": "f6de7134ed16ef090c4a6418bc6b617eac06204769f2687433c9466d6f0b03be",
+      "split": "train",
+      "width": 192,
+      "height": 349
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0095.jpg",
+      "label": 4,
+      "identity": "8dedb5bf299520d245abd1cf4a8953824a10bbd02bd77d8da9ffbe95e15755d6",
+      "sha256": "d42c82e53a003d96c7010d75d6c5aebed84b7bf1d63e2eaab757e53348d00ec6",
+      "split": "train",
+      "width": 750,
+      "height": 1074
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0108.jpg",
+      "label": 4,
+      "identity": "29a83b881c3267f9d9d96d3356d8571b692db5ac1627d787a13934ab1f4184f2",
+      "sha256": "8c7de56b4234aab27f83f3769e73fd09cc063ca4c849e34c10a2078c14a5669d",
+      "split": "train",
+      "width": 800,
+      "height": 591
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0256.jpg",
+      "label": 4,
+      "identity": "859e01f39cb1f06b2f456639e74f741871eeffd897289dd929faebff5cdaedeb",
+      "sha256": "31cc1b86a55fc4bf2f7be5efcfd7bef008f46bf10e47edaf30c79e9a46e18767",
+      "split": "train",
+      "width": 553,
+      "height": 800
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0275.jpg",
+      "label": 4,
+      "identity": "b59cdf30b86fa566136dbca2ff1febebbc5e7efbf7cfb4c11c2579d5edfa2bad",
+      "sha256": "31bbeef3c430ff875398e30a2353bc4adc0c19057735fbb304d739f38797bc46",
+      "split": "train",
+      "width": 307,
+      "height": 394
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0334.jpg",
+      "label": 4,
+      "identity": "adb12e32230a35d575a47429f18d626ac83ccd48f80ffbb493b82cb305b621e8",
+      "sha256": "8e6b932bedd531a17e6368f4910721699481965ea982e8b233b904a2966fb110",
+      "split": "train",
+      "width": 4448,
+      "height": 2959
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0356.jpg",
+      "label": 4,
+      "identity": "166a913f9abce4fde464c422091c6f167c91a9dd601a4825a4e5e4b84792f209",
+      "sha256": "b9ad59d7ceb686803e4574bfc7c10c868cd51c702687111312c06a7844630fa1",
+      "split": "train",
+      "width": 2348,
+      "height": 3518
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0370.jpg",
+      "label": 4,
+      "identity": "20e68ec0fbe0c04f4808bdd56b00a715f86d35a3d700cb8d061b7de32cc43d9c",
+      "sha256": "f59a235e341271d9f5da7710df1ed2f42e296661eb884b26dc68af0159971669",
+      "split": "train",
+      "width": 365,
+      "height": 768
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0381.jpg",
+      "label": 4,
+      "identity": "fcf84598ffd2e0f7fc5767059e5ac5a2e196ea3dfc264d0af9736f922ed6dc0c",
+      "sha256": "831365c5bde5ef20304a81d155c02f29fe665d7592c8cd924d88251a33ce4b21",
+      "split": "train",
+      "width": 1128,
+      "height": 1688
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0382.jpg",
+      "label": 4,
+      "identity": "d625905ed5daa12fd6e94433555ac1481fb9a029dda7de6cce73795a392198f1",
+      "sha256": "f637dd0a609cdebc14628c8d32bd89b53c0ff6ce79529e8e31dbde64e7aea39e",
+      "split": "train",
+      "width": 2165,
+      "height": 3125
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0397.jpg",
+      "label": 4,
+      "identity": "dbf58d52090be36e524f65d767de5e04813ffb9a78cff50627d53d78f26ce765",
+      "sha256": "e8bd5b759acbf87c100bd95aa9179ae44ba9d283e494357f05757615ec47b9d1",
+      "split": "train",
+      "width": 896,
+      "height": 2418
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0400.jpg",
+      "label": 4,
+      "identity": "044f1a47c56e44d2911943c5deebe757ac196f487b0e7c55d8ddf7e6171ea6c8",
+      "sha256": "7d897cf9edb5596b1cdc5261774cdaced7f6919b13d9e345ffa517a9865a8e2a",
+      "split": "train",
+      "width": 775,
+      "height": 1600
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0427.jpg",
+      "label": 4,
+      "identity": "b6422cb454e3c297bf6d42f8336c2dbad17f24ea402cb45b07f5094dc88df3a0",
+      "sha256": "92ed4f6f348131a66ca61f0d6e2038ef9737c9f537969a92c8c75b0dc69a6491",
+      "split": "train",
+      "width": 5978,
+      "height": 4343
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0565.jpg",
+      "label": 4,
+      "identity": "9e8b9ba800f854052755ee4084a73a41606d263dea62e709b59f06d0c6b3a4b2",
+      "sha256": "2eee5a50436b128ec8c379ffd3fd24151fce3377e4b79e82f14b635422af17c3",
+      "split": "train",
+      "width": 550,
+      "height": 793
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0682.jpg",
+      "label": 4,
+      "identity": "de226ef349f4ce11e7f5cb5d58793f378cf61ac6bf7c8cb860bce37b846c3d0d",
+      "sha256": "4a0cfa50c2b243964317c1795733e54003d890755c53a3d0ed4777fcc3017fff",
+      "split": "train",
+      "width": 709,
+      "height": 889
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0734.jpg",
+      "label": 4,
+      "identity": "1c5c1a53a014d14c02b2f476b7b7e8a87c8b81c3aec5d7128b6d2871617948b2",
+      "sha256": "2140a53ec44c123898940c46b597a80ff7039c5b6128f0042fc012e0e1042881",
+      "split": "train",
+      "width": 1183,
+      "height": 594
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0758.jpg",
+      "label": 4,
+      "identity": "95411f409c32c55a39d25cce80456efd6a26d65e6c3311f6d8d4451db60bac31",
+      "sha256": "c17b9520eeb2d60329869577255a27b907aff09c2116629efd3c28b4485aba16",
+      "split": "train",
+      "width": 1174,
+      "height": 2400
+    },
+    {
+      "filename": "data/selected/Ukiyo-e/0807.jpg",
+      "label": 4,
+      "identity": "732a8e2a6e35cfe10a150b1d18c32753fb5f41160151e56a7870ede98d718085",
+      "sha256": "c9e159629a8ef594fcb79c32b6cef39f149f83905d7b16a2967f31e1adeae5a1",
+      "split": "train",
+      "width": 640,
+      "height": 408
+    }
+  ],
+  "pixel_count_min": 60900,
+  "pixel_count_max": 25962454,
+  "pixel_count_total": 209374028,
+  "warmup_images_per_mode": 5,
+  "cache": "no feature cache; OS filesystem cache uncontrolled",
+  "timing_scope": "process start/shutdown + file hash + decode + feature extraction + result collection",
+  "equivalence": "exact arrays, labels, identity and order for every run",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "numpy": "2.5.4",
+  "Pillow": "12.3.0",
+  "max_in_flight": "2 * workers",
+  "child_native_threads": 1,
+  "results": [
+    {
+      "workers": 1,
+      "wall_seconds": [
+        4.626299199997447,
+        3.7934979000128806
+      ],
+      "median_seconds": 4.209898550005164,
+      "images_per_second": 23.75354151939774,
+      "speedup": 1.0
+    },
+    {
+      "workers": 2,
+      "wall_seconds": [
+        2.8435363000025973,
+        2.880734200007282
+      ],
+      "median_seconds": 2.8621352500049397,
+      "images_per_second": 34.93894986263399,
+      "speedup": 1.4708943436540598
+    },
+    {
+      "workers": 4,
+      "wall_seconds": [
+        2.39231479994487,
+        2.3282103000674397
+      ],
+      "median_seconds": 2.360262550006155,
+      "images_per_second": 42.36816789714315,
+      "speedup": 1.7836568859655828
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "same_smoke_identities": true,
+  "canonical_split_unchanged": true,
+  "models": [
+    {
+      "model": "simple_ann",
+      "fresh_process_load": true,
+      "file_bytes_predictions_match": true,
+      "distribution_sum": 1.0
+    },
+    {
+      "model": "cnn",
+      "fresh_process_load": true,
+      "file_bytes_predictions_match": true,
+      "distribution_sum": 1.0
+    }
+  ]
+}

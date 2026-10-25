@@ -1,0 +1,15 @@
+﻿{
+    "os":  "Microsoft Windows 11 Pro",
+    "ram_total_gib":  15.41,
+    "ram_free_gib_at_inspection":  2.39,
+    "cpu":  "AMD Ryzen 7 5800H with Radeon Graphics",
+    "physical_cores":  8,
+    "logical_processors":  16,
+    "gpu":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_memory_mib":  4096,
+    "gpu_driver":  "596.21",
+    "tensorflow_installed":  false,
+    "configured_python":  "3.14.8",
+    "wsl":  "Ubuntu WSL2 installed, stopped; TensorFlow/GPU not verified",
+    "environment_changed":  false
+}

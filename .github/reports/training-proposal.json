@@ -1,0 +1,53 @@
+﻿{
+    "status":  "implemented_and_smoke_verified_phase2a",
+    "seed":  42,
+    "split_manifest":  "data/prepared/splits.csv",
+    "classes":  [
+                    "Baroque",
+                    "Impressionism",
+                    "Cubism",
+                    "Pop Art",
+                    "Ukiyo-e"
+                ],
+    "optimizer":  "model-specific",
+    "learning_rate":  0.001,
+    "batch_size":  32,
+    "loss":  "model-specific",
+    "early_stopping":  {
+                           "monitor":  "val_loss",
+                           "patience":  5,
+                           "restore_best_weights":  true
+                       },
+    "simple_ann":  {
+                       "max_epochs":  40,
+                       "architecture":  [
+                                            "Input(2048)",
+                                            "Dense(5,sigmoid,bias=true)"
+                                        ],
+                       "augmentation":  false,
+                       "parameters":  10245,
+                       "optimizer":  "SGD",
+                       "loss":  "binary_crossentropy"
+                   },
+    "cnn":  {
+                "max_epochs":  50,
+                "architecture":  [
+                                     "Input(128,128,3)",
+                                     "Conv2D(16,3,same,relu)",
+                                     "MaxPool2D(2)",
+                                     "Conv2D(32,3,same,relu)",
+                                     "MaxPool2D(2)",
+                                     "Conv2D(64,3,same,relu)",
+                                     "MaxPool2D(2)",
+                                     "GlobalAveragePooling2D",
+                                     "Dense(64,relu)",
+                                     "Dropout(0.3)",
+                                     "Dense(5,softmax)"
+                                 ],
+                "augmentation":  false,
+                "parameters":  28069,
+                "pretrained_weights":  false,
+                "optimizer":  "Adam",
+                "loss":  "categorical_crossentropy"
+            }
+}

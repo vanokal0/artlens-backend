@@ -1,0 +1,25 @@
+test_canonical_identity_mapping_and_subsets (test_ml.ManifestTests.test_canonical_identity_mapping_and_subsets) ... ok
+test_real_train_validation_paths_equal_upload_bytes (test_ml.ManifestTests.test_real_train_validation_paths_equal_upload_bytes) ... ok
+test_all_luminance_coefficients (test_ml.MathematicalTests.test_all_luminance_coefficients) ... ok
+test_arithmetic_mean_not_median_and_rounding (test_ml.MathematicalTests.test_arithmetic_mean_not_median_and_rounding) ... ok
+test_metrics_known_confusion (test_ml.MathematicalTests.test_metrics_known_confusion) ... ok
+test_sigmoid_presentation_preserves_ranking (test_ml.MathematicalTests.test_sigmoid_presentation_preserves_ranking) ... ok
+test_ann_single_sigmoid_layer_and_analytical_forward (test_ml.ModelTests.test_ann_single_sigmoid_layer_and_analytical_forward) ... ok
+test_dataset_training_guard_and_validation_order (test_ml.ModelTests.test_dataset_training_guard_and_validation_order) ... ok
+test_models_gradient_and_serialization (test_ml.ModelTests.test_models_gradient_and_serialization) ... ok
+test_cache_hit_and_source_drift (test_ml.ParallelTests.test_cache_hit_and_source_drift) ... ok
+test_spawn_equivalence_order_and_exception (test_ml.ParallelTests.test_spawn_equivalence_order_and_exception) ... ok
+test_audit_excludes_problems_and_deduplicates (test_preparation.DatasetTests.test_audit_excludes_problems_and_deduplicates) ... ok
+test_split_ratios_and_order_independence (test_preparation.DatasetTests.test_split_ratios_and_order_independence) ... ok
+test_bad_image_rejected (test_preparation.PreprocessingTests.test_bad_image_rejected) ... ok
+test_class_mapping (test_preparation.PreprocessingTests.test_class_mapping) ... ok
+test_exif_orientation (test_preparation.PreprocessingTests.test_exif_orientation) ... ok
+test_grid_order_and_unequal_cells (test_preparation.PreprocessingTests.test_grid_order_and_unequal_cells) ... ok
+test_known_luminance_and_bit_order (test_preparation.PreprocessingTests.test_known_luminance_and_bit_order) ... ok
+test_modes_tiny_images_and_repeatability (test_preparation.PreprocessingTests.test_modes_tiny_images_and_repeatability) ... ok
+test_rgb_channels (test_preparation.PreprocessingTests.test_rgb_channels) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 23.675s
+
+OK

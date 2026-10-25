@@ -1,0 +1,16 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.idea/
+.env
+.env.*
+!.env.example
+data/raw/
+data/selected/
+artifacts/
+.pytest_cache/
+.tools/
+data/cache/
+
+# Project exclude paths
+/data/
