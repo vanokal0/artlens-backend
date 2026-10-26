@@ -9,8 +9,8 @@ import unittest
 import numpy as np
 from PIL import Image
 
-from artlens.prepare import assign_splits, prepare
-from artlens.preprocessing import CLASSES, DIRECTORY_TO_CLASS, ann_features, cnn_tensor, decode_rgb
+from artlens.data import CLASSES, DIRECTORY_TO_CLASS, ann_features, cnn_tensor, decode_rgb
+from artlens.tools import assign_splits, prepare
 
 
 def png(image):

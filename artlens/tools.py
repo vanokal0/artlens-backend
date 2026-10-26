@@ -1,24 +1,32 @@
-"""Read-only source audit and reproducible shared split: python -m artlens.prepare."""
+"""Offline dataset tools: python -m artlens.tools {prepare,verify,benchmark}.
+
+prepare    read-only audit of data/selected and the reproducible train/validation/test split
+verify     check split invariants and real-image preprocessing (no TensorFlow)
+benchmark  uncached ANN feature extraction with 1/2/4 parallel workers
+"""
 import argparse
 from collections import Counter, defaultdict
 import csv
+from dataclasses import asdict
 import hashlib
 import importlib.metadata
+import io
 import json
 from pathlib import Path
 import platform
+import statistics
 import sys
+import time
 import unicodedata
 
+import numpy as np
 from PIL import Image
 
-from artlens.preprocessing import CLASSES, CONFIG, DIRECTORY_TO_CLASS, decode_rgb
+from artlens.data import (CLASSES, CONFIG, DIRECTORY_TO_CLASS, ROOT, SPLIT_SHA256, ann_features, cnn_tensor,
+                          config_hash, decode_rgb, digest, iter_preprocessed, load_manifest, select_samples)
 
 
-def digest(path):
-    with path.open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
-
+# ---------------------------------------------------------------- prepare
 
 def write_csv(path, rows, fields):
     with path.open("w", newline="", encoding="utf-8") as stream:
@@ -167,10 +175,112 @@ def prepare(root, output, seed=42):
     print(json.dumps({k: report[k] for k in ("source_records", "validated_records", "eligible_unique_images", "issue_counts", "split_counts", "artist_overlap_counts", "splits_sha256")}, indent=2))
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--output", type=Path, default=Path("data/prepared"))
-    parser.add_argument("--seed", type=int, default=42)
+# ---------------------------------------------------------------- verify
+
+def verify(root=ROOT):
+    output = root / "data/prepared"
+    report = json.loads((output / "audit.json").read_text(encoding="utf-8"))
+    with (output / "splits.csv").open(encoding="utf-8", newline="") as stream:
+        rows = list(csv.DictReader(stream))
+    assert digest(output / "splits.csv") == report["splits_sha256"]
+    assert digest(root / "data/selected/manifest.csv") == report["manifest_sha256"]
+    assert len({r["filename"] for r in rows}) == len(rows)
+    assert len({r["pixel_sha256"] for r in rows}) == len(rows)
+    assert len({r["sha256"] for r in rows}) == len(rows)
+    assert assign_splits(rows, report["seed"]) == rows
+    assert assign_splits(list(reversed(rows)), report["seed"]) == rows
+    for row in rows:
+        assert CLASSES[int(row["class_id"])] == row["style"]
+    checked = 0
+    for split in ("train", "validation", "test"):
+        for style in CLASSES:
+            subset = [r for r in rows if r["split"] == split and r["style"] == style]
+            assert subset
+            for row in subset[:2]:
+                path = root / row["filename"]
+                assert digest(path) == row["sha256"]
+                for function, shape in ((ann_features, (2048,)), (cnn_tensor, (128, 128, 3))):
+                    training = function(path)
+                    inference = function(io.BytesIO(path.read_bytes()))
+                    assert training.shape == shape and training.dtype == np.float32
+                    assert np.isfinite(training).all()
+                    assert ((training >= 0) & (training <= 1)).all()
+                    np.testing.assert_array_equal(training, inference)
+                checked += 1
+    result = {"split_records_verified": len(rows), "real_images_preprocessed": checked,
+              "path_vs_upload_bytes": "bit-identical", "split_reproduction": "passed",
+              "ann_shape": [2048], "cnn_shape": [128, 128, 3], "finite_and_range_checks": "passed"}
+    (output / "verification.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(result, indent=2))
+
+
+# ---------------------------------------------------------------- benchmark
+
+def benchmark(size=100, repeats=2, seed=42, output=Path("artifacts/parallel-benchmark.json")):
+    samples = select_samples(load_manifest(), "train", size, seed)
+    expected = None
+    timings = {w: [] for w in (1, 2, 4)}
+    # Warm up every execution mode. Each measurement still starts its own pool.
+    for workers in timings:
+        list(iter_preprocessed(samples[:5], ROOT, workers=workers))
+    for repeat in range(repeats):
+        # Reverse order on alternate repeats to reduce a fixed cache/order bias.
+        order = (1, 2, 4) if repeat % 2 == 0 else (4, 2, 1)
+        for workers in order:
+            start = time.perf_counter()
+            result = list(iter_preprocessed(samples, ROOT, workers=workers))
+            elapsed = time.perf_counter() - start
+            if [sample for sample, _ in result] != samples:
+                raise AssertionError("Result ordering/identity/label mismatch")
+            features = np.stack([value for _, value in result])
+            if expected is None:
+                expected = features
+            np.testing.assert_array_equal(expected, features)
+            timings[workers].append(elapsed)
+            print(json.dumps({"workers": workers, "repeat": repeat + 1, "seconds": elapsed}), flush=True)
+    baseline = statistics.median(timings[1])
+    report = {"images": len(samples), "seed": seed, "split": "train", "split_sha256": SPLIT_SHA256,
+              "preprocessing_hash": config_hash(), "samples": [asdict(s) for s in samples],
+              "pixel_count_min": min(s.width * s.height for s in samples),
+              "pixel_count_max": max(s.width * s.height for s in samples),
+              "pixel_count_total": sum(s.width * s.height for s in samples),
+              "warmup_images_per_mode": 5, "cache": "no feature cache; OS filesystem cache uncontrolled",
+              "timing_scope": "process start/shutdown + file hash + decode + feature extraction + result collection",
+              "equivalence": "exact arrays, labels, identity and order for every run",
+              "python": sys.version, "platform": platform.platform(), "cpu": platform.processor(),
+              "numpy": importlib.metadata.version("numpy"), "Pillow": importlib.metadata.version("Pillow"),
+              "max_in_flight": "2 * workers", "child_native_threads": 1,
+              "results": [{"workers": w, "wall_seconds": values, "median_seconds": statistics.median(values),
+                           "images_per_second": len(samples) / statistics.median(values),
+                           "speedup": baseline / statistics.median(values)} for w, values in timings.items()]}
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(report["results"], indent=2))
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    commands = parser.add_subparsers(dest="command", required=True)
+    p = commands.add_parser("prepare", help="audit data/selected and write data/prepared")
+    p.add_argument("--root", type=Path, default=ROOT)
+    p.add_argument("--output", type=Path, default=Path("data/prepared"))
+    p.add_argument("--seed", type=int, default=42)
+    commands.add_parser("verify", help="verify data/prepared against the source dataset")
+    b = commands.add_parser("benchmark", help="parallel ANN feature extraction benchmark")
+    b.add_argument("--size", type=int, default=100)
+    b.add_argument("--repeats", type=int, default=2)
+    b.add_argument("--seed", type=int, default=42)
+    b.add_argument("--output", type=Path, default=Path("artifacts/parallel-benchmark.json"))
     args = parser.parse_args()
-    prepare(args.root, args.output, args.seed)
+    if args.command == "prepare":
+        prepare(args.root, args.output, args.seed)
+    elif args.command == "verify":
+        verify()
+    else:
+        if args.repeats < 1:
+            parser.error("repeats must be positive")
+        benchmark(args.size, args.repeats, args.seed, args.output)
+
+
+if __name__ == "__main__":
+    main()

@@ -8,12 +8,9 @@ import unittest
 import numpy as np
 from PIL import Image
 
-from artlens.data import ROOT, Sample, load_manifest, select_samples
-from artlens.evaluation import classification_metrics
-from artlens.inference import presentation_scores
-from artlens.parallel import iter_preprocessed
-from artlens.prepare import digest
-from artlens.preprocessing import ann_features, cnn_tensor
+from artlens.data import ROOT, Sample, ann_features, cnn_tensor, digest, iter_preprocessed, load_manifest, select_samples
+from artlens.models import presentation_scores
+from artlens.training import classification_metrics
 
 
 class MathematicalTests(unittest.TestCase):
@@ -86,7 +83,7 @@ class ManifestTests(unittest.TestCase):
 
 class ParallelTests(unittest.TestCase):
     def test_cache_hit_and_source_drift(self):
-        from artlens.training.datasets import ann_matrix
+        from artlens.training import ann_matrix
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             path = root / "image.png"
@@ -124,11 +121,11 @@ class ParallelTests(unittest.TestCase):
 class ModelTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from artlens.runtime import configure
+        from artlens.models import configure
         cls.tf = configure(42, 2)
 
     def test_ann_single_sigmoid_layer_and_analytical_forward(self):
-        from artlens.models.simple_ann import build
+        from artlens.models import build_simple_ann as build
         model = build()
         self.assertEqual(len(model.layers), 1)
         self.assertEqual(model.count_params(), 10245)
@@ -165,7 +162,7 @@ class ModelTests(unittest.TestCase):
                 np.testing.assert_allclose(predictions, loaded(x, training=False), rtol=1e-5, atol=1e-6)
 
     def test_dataset_training_guard_and_validation_order(self):
-        from artlens.training.datasets import make_dataset
+        from artlens.training import make_dataset
         samples = select_samples(load_manifest(), "validation", 10)
         features = np.zeros((10, 2048), dtype=np.float32)
         features[:, 0] = np.arange(10)

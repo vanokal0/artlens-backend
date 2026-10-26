@@ -102,7 +102,7 @@ class TrainingWorkflowTest(unittest.TestCase):
     def training_children(self):
         """PIDs of training processes writing into this test's temporary runs directory."""
         script = ("Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | Where-Object { $_.CommandLine -like "
-                  f"'*artlens.training.train*{self.temp.name}*' }} | ForEach-Object {{ $_.ProcessId }}")
+                  f"'*artlens.training *{self.temp.name}*' }} | ForEach-Object {{ $_.ProcessId }}")
         output = subprocess.run(["powershell", "-NoProfile", "-Command", script],
                                 capture_output=True, text=True).stdout
         return [int(line) for line in output.split()]

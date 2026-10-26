@@ -13,8 +13,7 @@ import unittest
 
 import httpx
 
-from artlens.data import ROOT, load_manifest, select_samples
-from artlens.preprocessing import CLASSES
+from artlens.data import CLASSES, ROOT, load_manifest, select_samples
 
 STATUS_KEYS = {"status", "progress", "stage", "elapsedMs", "result"}
 

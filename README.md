@@ -44,7 +44,7 @@ The complete frontend contract, with real example responses, is
 - Training settings sent together with an analysis request are ignored; analysis never
   retrains a model. Analysis jobs run one at a time on a background thread, so the
   status endpoints stay responsive while a job runs.
-- Training runs `artlens.training.train` in a separate process and writes to
+- Training runs `python -m artlens.training` in a separate process and writes to
   `artifacts/runs/`. The new model is validated before it is activated, and the active
   versions are saved in `artifacts/active-models.json`. Delete that file to go back to
   the baseline models. While training runs, new analyses return `409`. Data
@@ -53,19 +53,12 @@ The complete frontend contract, with real example responses, is
 ## Project layout
 
 ```text
-artlens/                 Python package (all code)
+artlens/                 Python package (all code, five modules)
   api.py                 FastAPI app: the single server entry point
-  registry.py            active model versions: validation, activation, persistence
-  inference.py           artifact loading and prediction
-  preprocessing.py       ANN 16×16 grid features and CNN input tensors
-  data.py, parallel.py   dataset manifest and multiprocessing preprocessing
-  evaluation.py          metrics and learning curves
-  models/                Simple ANN (research paper) and CNN architectures
-  training/train.py      training CLI
-  training/datasets.py   training batches (CNN-only augmentation)
-  training/service.py    background training process used by the API
-  prepare.py, verify.py  dataset audit/split and its verification
-  benchmark.py           benchmark of parallel feature extraction
+  data.py                classes, ANN/CNN preprocessing, dataset split loader, multiprocessing
+  models.py              Simple ANN (research paper) and CNN, inference, active model versions
+  training.py            training CLI, batches, metrics, background training jobs for the API
+  tools.py               dataset audit/split (prepare), verify, parallel benchmark
 tests/                   unit and end-to-end API tests
 scripts/                 one-off WikiArt download tools (need pandas, requests, tqdm, kagglehub)
 data/                    raw, selected and prepared dataset (Git-ignored)
@@ -83,11 +76,11 @@ requirements.txt         direct dependencies; requirements.lock.txt has the test
 
 # Rebuild the baseline models offline. Output directories must not exist yet;
 # delete artifacts/active-models.json afterwards.
-& .\.venv\Scripts\python.exe -m artlens.training.train --model simple_ann --epochs 40 --learning-rate 0.001 --batch-size 32 --seed 42 --workers 2 --threads 4 --cache data/cache/ann --output artifacts/ann-full-seed42
-& .\.venv\Scripts\python.exe -m artlens.training.train --model cnn --epochs 50 --learning-rate 0.001 --batch-size 32 --seed 42 --workers 1 --threads 4 --output artifacts/cnn-full-seed42
+& .\.venv\Scripts\python.exe -m artlens.training --model simple_ann --epochs 40 --learning-rate 0.001 --batch-size 32 --seed 42 --workers 2 --threads 4 --cache data/cache/ann --output artifacts/ann-full-seed42
+& .\.venv\Scripts\python.exe -m artlens.training --model cnn --epochs 50 --learning-rate 0.001 --batch-size 32 --seed 42 --workers 1 --threads 4 --output artifacts/cnn-full-seed42
 
 # Dataset preparation and checks (already done; outputs go to data/prepared/)
-& .\.venv\Scripts\python.exe -m artlens.prepare
-& .\.venv\Scripts\python.exe -m artlens.verify
-& .\.venv\Scripts\python.exe -m artlens.benchmark --size 100 --repeats 2
+& .\.venv\Scripts\python.exe -m artlens.tools prepare
+& .\.venv\Scripts\python.exe -m artlens.tools verify
+& .\.venv\Scripts\python.exe -m artlens.tools benchmark --size 100 --repeats 2
 ```

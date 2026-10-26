@@ -20,9 +20,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image, UnidentifiedImageError
 from pydantic import BaseModel, Field, model_validator
 
-from artlens import registry
-from artlens.inference import PREPROCESSORS, raw_outputs, result_from_raw
-from artlens.training.service import TrainingBusy, TrainingManager
+from artlens.models import (PREPROCESSORS, configure, load_active, raw_outputs, result_from_raw, save_state,
+                            validate_artifact)
+from artlens.training import TrainingBusy, TrainingManager
 
 log = logging.getLogger("artlens.api")
 
@@ -46,11 +46,11 @@ executor = None
 
 def activate(model_id, directory):
     """Validate a new artifact, then atomically switch to it and persist the choice."""
-    model, info = registry.validate_artifact(directory, model_id)
+    model, info = validate_artifact(directory, model_id)
     with models_lock:
         directories = {m: entry["directory"] for m, entry in active.items()}
         directories[model_id] = directory
-        registry.save_state(directories)
+        save_state(directories)
         models[model_id] = model
         active[model_id] = {"info": info, "directory": directory}
     print(f"Activated {model_id} version {info['version']}", flush=True)
@@ -62,9 +62,8 @@ trainer = TrainingManager(activate)
 @asynccontextmanager
 async def lifespan(_app):
     global executor
-    from artlens.runtime import configure
     configure(seed=42, threads=4)
-    for model_id, (model, info, directory) in registry.load_active().items():
+    for model_id, (model, info, directory) in load_active().items():
         models[model_id] = model
         active[model_id] = {"info": info, "directory": directory}
         print(f"Loaded {model_id} version {info['version']}", flush=True)
